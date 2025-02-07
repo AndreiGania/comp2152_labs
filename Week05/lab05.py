@@ -188,37 +188,37 @@ if not input_invalid:
 
         # Lab 5: Question 5:
         input("Roll to see who strikes first (Press Enter)")
-        
-        if :
+        attack_roll = random.choice(small_dice_options)
+        if not (attack_roll % 2 == 0):
             print("    |", end="    ")
             input("You strike (Press enter)")
-            
-            if :
+            m_health_points = functions_lab05.hero_attacks(combat_strength, m_health_points)
+            if m_health_points == 0:
                 num_stars = 3
             else:
                 print("    |", end="    ")
                 print("------------------------------------------------------------------")
                 input("    |    The monster strikes (Press enter)!!!")
-                
-                if :
-                    
+                health_points = functions_lab05.monster_attacks(m_combat_strength, health_points)
+                if health_points == 0:
+                    num_stars = 1
                 else:
-                    
+                    num_stars = 2
         else:
             print("    |", end="    ")
             input("The Monster strikes (Press enter)")
-            
-            if :
-                
+            health_points = functions_lab05.monster_attacks(m_combat_strength, health_points)
+            if health_points == 0:
+                num_stars = 1
             else:
                 print("    |", end="    ")
                 print("------------------------------------------------------------------")
                 input("The hero strikes!! (Press enter)")
-                
-                if :
-                    
+                m_health_points = functions_lab05.hero_attacks(combat_strength, m_health_points)
+                if m_health_points == 0:
+                    num_stars = 3
                 else:
-                    
+                    num_stars = 2
 
     # Final Score Display
     tries = 0
