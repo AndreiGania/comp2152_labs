@@ -20,7 +20,7 @@ file_object_TextIO = os.fdopen(file_handle, "w+")
 file_object_TextIO.write("Some string to write to this file")
 file_object_TextIO.flush()
 
-pid = 1
+pid = 0
 if pid == 0:
     print(f"\n [Child PID: {os.getpid()}], [Parent PID: {os.getppid}]")
     os.lseek(file_handle, 0, 0)
